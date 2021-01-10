@@ -21,3 +21,7 @@ section div {
     border: solid black 1px;
     padding-bottom: 2px;
   }
+
+  li {
+    list-style-type: none;
+  }

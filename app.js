@@ -27,6 +27,8 @@ function renderImages(leftProducts, midProducts, rightProducts) {
   leftImage.setAttribute("src", arrayOfProducts[leftProducts].url);
   midImage.setAttribute("src", arrayOfProducts[midProducts].url);
   rightImage.setAttribute("src", arrayOfProducts[rightProducts].url);
+
+  numberShown(leftProducts, midProducts, rightProducts);
 }
 
 function random() {
@@ -52,12 +54,13 @@ function numberOfTrials(object) {
   }
 }
 
-function numberShown(object) {
-  for(let i = 0; i < arrayOfProducts.length; i++) {
-    if(arrayOfProducts[i].url === object) {
-      arrayOfProducts[i].timesShown++;
-    }
-  }
+function numberShown(leftProducts, midProducts, rightProducts) {
+      arrayOfProducts[leftProducts].timesShown++;
+      // console.log(arrayOfProducts[leftProducts].timesShown++);
+      arrayOfProducts[midProducts].timesShown++;
+      // console.log(arrayOfProducts[midProducts].timesShown++);
+      arrayOfProducts[rightProducts].timesShown++;
+      // console.log(arrayOfProducts[rightProducts].timesShown++);
 }
 
 function countProducts(event) {
@@ -67,7 +70,6 @@ function countProducts(event) {
     if(targetId === "left_product" || targetId === "middle_product" || targetId === "right_product") {
       var object = event.target.getAttribute("src");
       numberOfTrials(object);
-      numberShown(object)
       random();
     }
   } else {
@@ -98,12 +100,10 @@ new Product("water-can", "water-can.jpg");
 new Product("wine-glass", "wine-glass.jpg");
 
 random();
-console.log(arrayOfProducts);
 
 productsSection.addEventListener("click", countProducts);
 
 var results = document.getElementById("results");
-console.log(results);
 results.addEventListener("click", function() {
   var ul = document.createElement("ul");
   var section = document.getElementById("list_items");
