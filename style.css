@@ -22,10 +22,6 @@ section div {
     padding-bottom: 2px;
   }
 
-  li {
-    list-style-type: none;
-  }
-
   ul {
-    list-style-type: none;
+    list-style: none;
   }
