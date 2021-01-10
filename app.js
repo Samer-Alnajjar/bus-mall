@@ -36,7 +36,7 @@ function random() {
   var midRandom = Math.ceil(Math.random() * 19);
   var rightRandom = Math.ceil(Math.random() * 19);
 
-  while(((leftRandom === midRandom) || (midRandom === rightRandom)) || (leftRandom === rightRandom)) {
+  while(leftRandom === midRandom || midRandom === rightRandom || leftRandom === rightRandom) {
     leftRandom = Math.ceil(Math.random() * 19);
     midRandom = Math.ceil(Math.random() * 19);
     rightRandom = Math.ceil(Math.random() * 19);
