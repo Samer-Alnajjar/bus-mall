@@ -46,8 +46,6 @@ function eraseVotes() {
   //To reload the page 
   location.reload();
   
-  renderChart();
-
 }
 
 // The checkAndRestore function is responsible to check if the localStorage object has any values in it.
@@ -291,8 +289,6 @@ new Product("water-can", "water-can.jpg");
 new Product("wine-glass", "wine-glass.jpg");
 
 random();
-
-
 productsSection.addEventListener("click", countProducts);
 eraseButton.addEventListener("click", eraseVotes);
 
